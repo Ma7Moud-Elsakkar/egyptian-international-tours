@@ -1,0 +1,73 @@
+:root {
+    --bg:#1f1f38;
+    --bg-variant:#2c2c6c;
+    --primary:#4db5ff;
+    --primary-variant: rgba(77, 181, 255, 0.4);
+    --white:#fff;
+    --light: rgba(255, 255, 255, 0.6);
+    --transition: all 0.4s ease;
+} 
+
+.projects_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.projects_container .portfolio_item {
+    width: 100%;
+    background: var(--bg-variant);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: var(--transition, all 0.4s ease);
+    display: flex;
+    flex-direction: column;
+}
+
+.projects_container .portfolio_item:hover {
+    border-color: var(--primary-variant);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    /* removed transparent background trick to allow light-theme glassy to stay */
+}
+
+.portfolio_item_img {
+    border-radius: 15px;
+    overflow: hidden;
+    height: auto;
+}
+
+.portfolio_item_img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio_item:hover .portfolio_item_img img {
+    transform: scale(1.1);
+}
+
+.portfolio_item h3 {
+    margin: 22px 0 35px;
+}
+
+.portfolio_item_btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+    .projects_container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .projects_container {
+        grid-template-columns: 1fr;
+    }
+}

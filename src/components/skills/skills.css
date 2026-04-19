@@ -1,0 +1,98 @@
+:root {
+    --bg:#1f1f38;
+    --bg-variant:#2c2c6c;
+    --primary:#4db5ff;
+    --primary-variant: rgba(77, 181, 255, 0.4);
+    --white:#fff;
+    --light: rgba(255, 255, 255, 0.6);
+    --transition: all 0.4s ease;
+}
+
+.container_skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.container_skills .card_skill {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--bg-variant);
+    border: 1px solid transparent;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    transition: var(--transition, all 0.4s ease);
+}
+
+.container_skills .card_skill:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.container_skills .card_skill .icon {
+    flex-shrink: 0;
+    width: 75px;
+    height: 75px;
+    padding: 15px;
+    border-radius: 50%;
+    background: rgba(77, 181, 255, 0.1);
+    border: 2px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition, all 0.4s ease);
+}
+
+.container_skills .card_skill:hover .icon {
+    background: var(--primary);
+    transform: rotate(360deg);
+}
+
+.container_skills .card_skill .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Filter to color the images exactly like var(--primary) which is #4db5ff */
+    filter: brightness(0) saturate(100%) invert(67%) sepia(51%) saturate(2359%) hue-rotate(185deg) brightness(101%) contrast(105%);
+    transition: var(--transition, all 0.4s ease);
+}
+
+/* Make image purely white on hover to stand out against primary colored background */
+.container_skills .card_skill:hover .icon img {
+    filter: brightness(0) invert(1);
+}
+
+.container_skills .card_skill h4 {
+    font-size: 16px;
+
+}
+
+.container_skills .card_skill p {
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .container_skills {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .container_skills {
+        grid-template-columns: 1fr;
+    }
+    .container_skills .card_skill .icon {
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+    .container_skills .card_skill h4 {
+        font-size: 15px;
+    }   
+    .container_skills .card_skill p {
+        font-size: 13px;
+    }
+}

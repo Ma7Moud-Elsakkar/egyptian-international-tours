@@ -1,0 +1,45 @@
+    :root {
+    --bg:#1f1f38;
+    --bg-variant:#2c2c6c;
+    --primary:#4db5ff;
+    --primary-variant: rgba(77, 181, 255, 0.4);
+    --white:#fff;
+    --light: rgba(255, 255, 255, 0.6);
+    --transition: all 0.4s ease;
+}
+    
+    nav{
+        background: rgba(0, 0, 0, 0.3);
+        width: max-content;
+        display: block;
+        padding: 0.7rem 1.7rem;
+        z-index: 10;
+        position: fixed;
+        left: 50%;
+        top: 2rem;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.8rem;
+        border-radius: 3rem;
+        backdrop-filter: blur(15px);
+    }
+
+    nav a, nav .theme-toggle {
+        background: transparent;
+        padding: 0.8rem;
+        border-radius: 50%;
+        color: var(--light);
+        font-size: 1.1rem;
+        display: flex;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav a.active{
+        background: var(--primary-variant);
+        color: var(--white);
+    }
+
+    nav a:hover, nav .theme-toggle:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }

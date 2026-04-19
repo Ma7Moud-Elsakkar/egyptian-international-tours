@@ -1,0 +1,141 @@
+:root {
+    --bg:#1f1f38;
+    --bg-variant:#2c2c6c;
+    --primary:#4db5ff;
+    --primary-variant: rgba(77, 181, 255, 0.4);
+    --white:#fff;
+    --light: rgba(255, 255, 255, 0.6);
+    --transition: all 0.4s ease;
+}
+
+
+
+
+.home {
+    height: 100vh;
+    padding-top:100px;
+    overflow: hidden;
+}
+
+.home_container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.btns {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+
+}
+
+.home_container h4 {
+    font-size: 1.5rem;
+}
+
+.home_container h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.home_container .me {
+    width: 330px;
+    height: 400px;
+    background: linear-gradient(var(--primary), transparent);
+    border-radius: 12rem 12rem 0 0;
+    margin: 40px auto;
+    padding: 6rem 1.5rem 1.5rem 1.5rem;
+    overflow: hidden;
+    transition: var(--transition, all 0.4s ease);
+}
+
+.home_container .me:hover {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 15px 30px var(--primary-variant));
+}
+
+.scroll-down {
+    position: absolute;
+    right: -35px;
+    bottom: 80px;
+    transform: rotate(90deg);
+    font-weight: 300;
+    transition: var(--transition, all 0.4s ease);
+}
+.scroll-down:hover {
+    color: var(--white);
+    text-shadow: 0 0 10px var(--primary);
+    transform: rotate(90deg) translateX(10px);
+}
+html[dir="rtl"] .scroll-down {
+    right: auto;
+    left: -35px;
+}
+
+.home-socials {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    bottom: 50px;
+    position: absolute;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+html[dir="rtl"] .home-socials {
+    left: auto;
+    right: 0;
+}
+
+.home-socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--primary);
+}
+
+.home-socials a {
+    font-size: 20px;
+    transition: var(--transition, all 0.4s ease);
+}
+.home-socials a:hover {
+    transform: scale(1.2);
+    color: var(--white);
+    filter: drop-shadow(0 0 10px var(--primary));
+}
+
+@media (max-width: 1024px) {
+    .home {
+        height: 100vh;
+    }
+    .home_container h1 {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .home {
+        height: auto;
+        padding-top: 5rem;
+    }
+
+    .home-socials , .scroll-down {
+        display: none;
+    }
+
+    .home_container h1 {
+        font-size: 2rem;
+    }
+
+    .home_container .me {
+        max-width: 100%;
+        width: 300px;
+        height: 350px;
+    }
+}
