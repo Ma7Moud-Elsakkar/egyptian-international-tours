@@ -42,6 +42,7 @@ function About() {
             </div>
           </div>
 
+
           <p>{t('about_text_1')} <br/>
               {t('about_text_2')}<br/>
               {t('about_text_3')}<br />
@@ -49,6 +50,7 @@ function About() {
           </p>
           <a href="#contact" className='btn btn-primary'>{t('lets_talk')}</a>
         </div>
+        
       </div>
     </section>
   )
