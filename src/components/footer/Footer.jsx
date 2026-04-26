@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-section about">
-          <a href="#" className='footer-logo'>{t('company_name')}</a>
+          <a href="/" className='footer-logo'>{t('company_name')}</a>
           <p>{t('footer_desc')}</p>
           <div className="social-links">
             <a href="https://www.facebook.com/share/17s9oFqBy3/?mibextid=wwXIfr"  target='_blank' rel="noreferrer"><FaFacebook /></a>
