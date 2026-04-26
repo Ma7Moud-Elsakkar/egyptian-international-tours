@@ -48,7 +48,7 @@
 .home_container .me {
     width: 330px;
     height: 400px;
-    background: linear-gradient(var(--primary), transparent);
+    background: linear-gradient(var(--primary-variant), transparent);
     border-radius: 12rem 12rem 0 0;
     margin: 40px auto;
     padding: 6rem 1.5rem 1.5rem 1.5rem;
